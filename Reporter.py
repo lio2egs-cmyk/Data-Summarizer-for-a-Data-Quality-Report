@@ -8,12 +8,13 @@
 import pandas as pd
 import numpy as np
 import warnings
+FEATURE_NAMES_FILE = "./data/feature_names.txt"
 
 ## This function reads in the headers from the feature names file
 ## Next it converts it to a list so it can be used when reading in the data
 ## I have also selected which features are continuous and which are categorical here
 def getHeaders():
-	headersDF = pd.read_csv('./data/feature_names.txt', header=None, nrows=16)
+	headersDF = pd.read_csv('FEATURE_NAMES_FILE', header=None, nrows=16)
 	
 	headersList = [""]*len(headersDF)
 	for row in range(0,len(headersDF)):
